@@ -67,15 +67,18 @@
     "karma-jasmine": "^1.1.2",
     "karma-junit-reporter": "^1.2.0",
     "minimatch": "^3.0.2",
+    "run-script-os": "^1.1.5",
     "through2": "^2.0.1",
     "uglify-js": "^2.6.3",
     "vinyl-fs": "^2.4.3"
   },
   "scripts": {
-    "dist": "./node_modules/gulp/bin/gulp.js dist",
-    "run": "./node_modules/aurelia-cli/bin/aurelia-cli.js run",
-    "test": "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
-    "build": "./node_modules/aurelia-cli/bin/aurelia-cli.js build",
+    "dist": "node ./node_modules/gulp/bin/gulp.js dist",
+    "test": "run-script-os",
+    "run": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js run",
+    "test:win32": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js test",
+    "test:darwin:linux": "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
+    "build": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js build",
     "build-dist": "npm run-script build && npm run-script dist"
   }
 }
