@@ -73,12 +73,10 @@
     "vinyl-fs": "^2.4.3"
   },
   "scripts": {
-    "dist": "node ./node_modules/gulp/bin/gulp.js dist",
-    "test": "run-script-os",
-    "run": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js run",
-    "test:win32": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js test",
-    "test:darwin:linux": "./node_modules/aurelia-cli/bin/aurelia-cli.js test",
-    "build": "node ./node_modules/aurelia-cli/bin/aurelia-cli.js build",
+    "dist": "gulp dist",
+    "run": "aurelia run",
+    "test": "aurelia test",
+    "build": "aurelia build",
     "build-dist": "npm run-script build && npm run-script dist"
   }
 }
